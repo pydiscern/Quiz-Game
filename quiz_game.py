@@ -1,7 +1,7 @@
 import random
 
-# Sample questions and answers
-questions = questions = [
+# questions and answers
+questions = [
     {
         "question": "What is the correct way to define a variable in Python?",
         "options": ["int x = 10;", "x := 10", "x = 10", "let x = 10"],
@@ -64,6 +64,37 @@ def main():
         print()
 
     print(f"Your final score: {score}/{len(questions)}")
+    class Question:
+    def __init__(self, question, options, answer):
+        self.question = question
+        self.options = options
+        self.answer = answer
+
+question_pool = [
+    Question("What is the correct way to define a variable in Python?", ["int x = 10;", "x := 10", "x = 10", "let x = 10"], "x = 10"),
+    # Add more questions related to Python fundamentals as instances of the Question class
+]
+
+def ask_question(question):
+    print(question.question)
+    for i, option in enumerate(question.options):
+        print(f"{i+1}. {option}")
+    answer = int(input("Select the correct option (1-4): ")) - 1
+    return question.options[answer] == question.answer
+
+def main():
+    score = 0
+    random.shuffle(question_pool)
+
+    for question in question_pool:
+        if ask_question(question):
+            print("Correct!")
+            score += 1
+        else:
+            print("Incorrect. Better luck next time!")
+        print()
+
+    print(f"Your final score: {score}/{len(question_pool)}")
 
 if __name__ == "__main__":
     main()
