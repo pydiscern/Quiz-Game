@@ -1,13 +1,47 @@
 import random
 
 # Sample questions and answers
-questions = [
+questions = questions = [
     {
         "question": "What is the correct way to define a variable in Python?",
         "options": ["int x = 10;", "x := 10", "x = 10", "let x = 10"],
         "answer": "x = 10"
     },
-    # Add more questions related to Python fundamentals
+    {
+        "question": "Which of the following is a valid Python data type?",
+        "options": ["integer", "float", "double", "decimal"],
+        "answer": "float"
+    },
+    {
+        "question": "How do you create a list in Python?",
+        "options": ["my_list = (1, 2, 3)", "my_list = [1, 2, 3]", "my_list = {1, 2, 3}", "my_list = <1, 2, 3>"],
+        "answer": "my_list = [1, 2, 3]"
+    },
+    {
+        "question": "Which loop continues executing a block of code as long as a specified condition is true?",
+        "options": ["do-while loop", "for loop", "while loop", "until loop"],
+        "answer": "while loop"
+    },
+    {
+        "question": "What is the correct way to define a function in Python?",
+        "options": ["function my_function():", "def my_function():", "func my_function():", "define my_function():"],
+        "answer": "def my_function():"
+    },
+    {
+        "question": "Which of the following is a valid string in Python?",
+        "options": ['"Hello, World!"', "'Hello, World!'", "Hello, World!", "string('Hello, World!')"],
+        "answer": "'Hello, World!'"
+    },
+    {
+        "question": "Which of the following is NOT a valid way to create a dictionary in Python?",
+        "options": ["my_dict = dict()", "my_dict = {}", "my_dict = {key: value}", "my_dict = [key: value]"],
+        "answer": "my_dict = [key: value]"
+    },
+    {
+        "question": "How do you access the first element of a list named 'my_list'?",
+        "options": ["my_list[0]", "my_list(0)", "my_list(1)", "my_list[1]"],
+        "answer": "my_list[0]"
+    },
 ]
 
 def ask_question(question):
