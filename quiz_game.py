@@ -72,7 +72,15 @@ def main():
 
 question_pool = [
     Question("What is the correct way to define a variable in Python?", ["int x = 10;", "x := 10", "x = 10", "let x = 10"], "x = 10"),
-    # Add more questions related to Python fundamentals as instances of the Question class
+    Question("Which of the following is a valid Python data type?", ["integer", "float", "double", "decimal"], "float"),
+    Question("How do you create a list in Python?", ["my_list = (1, 2, 3)", "my_list = [1, 2, 3]", "my_list = {1, 2, 3}", "my_list = <1, 2, 3>"], "my_list = [1, 2, 3]"),
+    Question("Which loop continues executing a block of code as long as a specified condition is true?", ["do-while loop", "for loop", "while loop", "until loop"], "while loop"),
+    Question("What is the correct way to define a function in Python?", ["function my_function():", "def my_function():", "func my_function():", "define my_function():"], "def my_function():"),
+    Question("Which of the following is a valid string in Python?", ['"Hello, World!"', "'Hello, World!'", "Hello, World!", "string('Hello, World!')"], "'Hello, World!'"),
+    Question("Which of the following is NOT a valid way to create a dictionary in Python?", ["my_dict = dict()", "my_dict = {}", "my_dict = {key: value}", "my_dict = [key: value]"], "my_dict = [key: value]"),
+    Question("How do you access the first element of a list named 'my_list'?", ["my_list[0]", "my_list(0)", "my_list(1)", "my_list[1]"], "my_list[0]"),
+    Question("What is the output of the following code snippet: 'print(5 // 2)'?", ["2", "2.5", "3", "None of the above"], "2"),
+    Question("What is the output of the following code snippet: 'print(2 * 3 ** 2)'?", ["36", "18", "12", "9"], "18"),
 ]
 
 def ask_question(question):
